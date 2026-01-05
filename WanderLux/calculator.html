@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate the estimated cost of your trip with WanderLux.">
+    <title>WanderLux Travel Agency | Trip Calculator</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .calculator-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            margin-top: 80px;
+            background-color: var(--bg-offset);
+            padding: 2rem;
+        }
+
+        .calculator-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color var(--transition-speed);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .result-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f0f7ff;
+            border-left: 5px solid var(--primary-color);
+            display: none;
+            /* Hidden by default */
+        }
+
+        .result-box.visible {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .result-text {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Wander<span>Lux</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="calculator.html" class="active">Trip Calculator</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="appointment.html" class="btn btn-primary" style="padding: 8px 20px;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section fade-in">
+        <div class="calculator-card">
+            <h2 class="text-center">Trip Cost Estimator</h2>
+            <p class="text-center" style="margin-bottom: 2rem; color: #666;">Plan your budget with our easy-to-use
+                calculator.</p>
+
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <select id="destination" class="form-control" required>
+                        <option value="" disabled selected>Select a destination</option>
+                        <option value="Bali">Bali, Indonesia</option>
+                        <option value="Paris">Paris, France</option>
+                        <option value="New York">New York, USA</option>
+                        <option value="Tokyo">Tokyo, Japan</option>
+                        <option value="London">London, UK</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="travellers">Number of Travellers</label>
+                    <input type="number" id="travellers" class="form-control" min="1" max="20" placeholder="e.g., 2"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="days">Number of Days</label>
+                    <input type="number" id="days" class="form-control" min="1" max="60" placeholder="e.g., 7" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="style">Travel Style</label>
+                    <select id="style" class="form-control" required>
+                        <option value="" disabled selected>Select comfort level</option>
+                        <option value="Budget">Budget (Economical)</option>
+                        <option value="Standard">Standard (Comfortable)</option>
+                        <option value="Luxury">Luxury (Premium)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Calculate Quote</button>
+            </form>
+
+            <div id="result" class="result-box">
+                <p class="result-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WanderLux</h3>
+                    <p>Your trusted partner for personalized travel experiences around the globe.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Lane, Cityville</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@wanderlux.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WanderLux Travel Agency. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>

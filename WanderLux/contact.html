@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with WanderLux Travel Agency for inquiries and support.">
+    <title>WanderLux Travel Agency | Contact Us</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            margin-top: 80px;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .contact-info-card {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .contact-info-card h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 5px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .contact-form {
+            padding: 1rem;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .contact-form form {
+            text-align: center;
+        }
+
+        .contact-form .form-control {
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+        }
+
+        .contact-form .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+        }
+
+        .contact-form .form-control::placeholder {
+            color: #999;
+        }
+
+        button[type="submit"] {
+            cursor: pointer;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Wander<span>Lux</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="calculator.html">Trip Calculator</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="appointment.html" class="btn btn-primary" style="padding: 8px 20px;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="container fade-in">
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div>
+                <div class="contact-info-card">
+                    <h2>Get In Touch</h2>
+                    <p style="margin-bottom: 2rem;">Have questions about our packages or need help planning your trip?
+                        We'd love to hear from you.</p>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Travel Lane, Suite 400<br>Cityville, ST 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 234 567 8900<br>Mon-Fri, 9am - 6pm</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@wanderlux.com<br>support@wanderlux.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <textarea class="form-control" placeholder="Your Message" style="height: 150px;"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <!-- Embedded Map -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f6225e8!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1602568600000!5m2!1sen!2sau"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+                        title="Google Map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WanderLux</h3>
+                    <p>Your trusted partner for personalized travel experiences around the globe.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Lane, Cityville</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@wanderlux.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WanderLux Travel Agency. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple form handling to simulate email sending
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Your message has been sent successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

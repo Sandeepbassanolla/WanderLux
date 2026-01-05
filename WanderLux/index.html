@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WanderLux Travel Agency - Premium personalized holiday planning and tours.">
+    <title>WanderLux Travel Agency | Home</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            height: 90vh;
+            background-color: #000000;
+            /* Darkest fallback */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+            /* Offset for fixed nav */
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Feautures Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-content {
+            padding: 1.5rem;
+        }
+
+        .feature-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-price {
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Wander<span>Lux</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="calculator.html">Trip Calculator</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="appointment.html" class="btn btn-primary" style="padding: 8px 20px;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero fade-in">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Experience the world with our premium personalized travel packages. From the pristine beaches of Bali to
+                the historic streets of Rome.</p>
+            <a href="destinations.html" class="btn">Explore Packages</a>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="section-padding fade-in">
+        <div class="container text-center">
+            <h2>Welcome to WanderLux</h2>
+            <p style="max-width: 700px; margin: 0 auto; color: #666;">
+                We are a premier travel agency dedicated to crafting unforgettable journeys. Whether you seek a relaxing
+                beach getaway, an adrenaline-fueled expedition, or a cultural immersion, our team of expert consultants
+                handles every detail.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Packages -->
+    <section class="section-padding" style="background-color: var(--bg-offset);">
+        <div class="container">
+            <h2 class="text-center fade-in">Popular Destinations</h2>
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-img"
+                        style="background-image: url('https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Bali, Indonesia</h3>
+                        <div class="feature-price">From $1,200</div>
+                        <p>Experience the tropical paradise with our 7-day all-inclusive package including flights and
+                            luxury villa.</p>
+                        <br>
+                        <a href="appointment.html" class="btn-primary"
+                            style="padding: 8px 16px; font-size: 0.9rem; border-radius: 4px; text-decoration: none;">Enquire
+                            Now</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-img"
+                        style="background-image: url('https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg');">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Paris, France</h3>
+                        <div class="feature-price">From $1,800</div>
+                        <p>A romantic 5-day getaway to the city of love. private tours of the Louvre and Eiffel Tower
+                            dinner included.</p>
+                        <br>
+                        <a href="appointment.html" class="btn-primary"
+                            style="padding: 8px 16px; font-size: 0.9rem; border-radius: 4px; text-decoration: none;">Enquire
+                            Now</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-img"
+                        style="background-image: url('https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_1280.jpg');">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Safari, Kenya</h3>
+                        <div class="feature-price">From $2,500</div>
+                        <p>Witness the Big Five in their natural habitat with our 6-day guided safari tour in Maasai
+                            Mara.</p>
+                        <br>
+                        <a href="appointment.html" class="btn-primary"
+                            style="padding: 8px 16px; font-size: 0.9rem; border-radius: 4px; text-decoration: none;">Enquire
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="destinations.html" class="btn btn-primary">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WanderLux</h3>
+                    <p>Your trusted partner for personalized travel experiences around the globe.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Lane, Cityville</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@wanderlux.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WanderLux Travel Agency. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple pure JS slider for background
+        const hero = document.querySelector('.hero');
+        const images = [
+            'https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285_1280.jpg', // Beach
+            'https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg', // Maldives
+            'https://cdn.pixabay.com/photo/2014/11/13/23/34/palace-530055_1280.jpg'  // London/City
+        ];
+        let currentImage = 0;
+
+        function rotateHero() {
+            currentImage = (currentImage + 1) % images.length;
+            hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${images[currentImage]}')`;
+        }
+
+        setInterval(rotateHero, 5000); // Rotate every 5 seconds
+    </script>
+</body>
+
+</html>
