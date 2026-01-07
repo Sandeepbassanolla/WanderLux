@@ -118,6 +118,14 @@
     </style>
 </head>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("dEuLkhHEGEdVCk3lc");
+  })();
+</script>
+
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -179,20 +187,22 @@
                 <h2>Send Us a Message</h2>
                 <form id="contactForm">
                     <div style="margin-bottom: 1rem;">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
+
                     <div style="margin-bottom: 1rem;">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
+
+                    
                     <div style="margin-bottom: 1rem;">
-                        <input type="text" class="form-control" placeholder="Subject" required>
+                        <textarea name="message" class="form-control" placeholder="Your Message"
+                        style="height: 150px;" required></textarea>
                     </div>
-                    <div style="margin-bottom: 1rem;">
-                        <textarea class="form-control" placeholder="Your Message" style="height: 150px;"
-                            required></textarea>
-                    </div>
+
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
+
 
                 <!-- Embedded Map -->
                 <div class="map-container">
@@ -238,13 +248,26 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Simple form handling to simulate email sending
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Your message has been sent successfully!');
-            this.reset();
-        });
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+        "service_io6yelq",
+        "template_vuh4yci",
+        this
+        ).then(
+        function () {
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        },
+        function (error) {
+            alert("Failed to send message. Please try again.");
+            console.error(error);
+        }
+        );
+    });
     </script>
+
 </body>
 
 </html>
